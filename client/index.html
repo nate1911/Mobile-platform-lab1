@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe List</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <h1>Recipe List</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Ingredients</th>
+                <th>Instructions</th>
+                <th>Cooking Time</th>
+            </tr>
+        </thead>
+        <tbody id="recipe-list">
+            <!-- Recipe data will be displayed here -->
+        </tbody>
+    </table>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        // JavaScript code to fetch and display recipe data will go here
+        async function fetchRecipes() {
+    try {
+        const response = await axios.get('/api/recipes'); // Replace with your API endpoint
+        const data = response.data;
+
+        const recipeList = document.getElementById('recipe-list');
+
+        // Loop through the recipe data and create HTML table rows
+        data.forEach(recipe => {
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td>${recipe.title || ''}</td>
+                <td>${Array.isArray(recipe.ingredients) ? recipe.ingredients.join(', ') : ''}</td>
+                <td>${recipe.instructions || ''}</td>
+                <td>${recipe.cookingtime ? recipe.cookingtime + ' minutes' : ''}</td>
+            `;
+            recipeList.appendChild(row);
+        });
+    } catch (error) {
+        console.error('Error fetching recipe data:', error);
+    }
+}
+
+
+        // Call the fetchRecipes function to load and display recipes when the page loads
+        window.onload = fetchRecipes;
+    </script>
+</body>
+</html>

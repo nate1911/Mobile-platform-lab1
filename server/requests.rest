@@ -1,0 +1,124 @@
+POST http://localhost:3000/api/recipes
+Content-Type: application/json
+
+{
+    "title": "Spaghetti Carbonara",
+    "ingredients": ["200g spaghetti", "100g pancetta", "2 eggs", "50g grated Parmesan cheese"],
+    "instructions": "1. Cook spaghetti. 2. Fry pancetta. 3. Mix eggs and cheese. 4. Combine all ingredients.",
+    "cookingtime": 30
+}
+###
+
+POST http://localhost:3000/api/recipes
+Content-Type: application/json
+
+{
+    "title": "Classic Chocolate Chip Cookies",
+    "ingredients": [
+        "2 1/4 cups all-purpose flour",
+        "1/2 teaspoon baking soda",
+        "1 cup unsalted butter, room temperature",
+        "1/2 cup granulated sugar",
+        "1 cup packed light-brown sugar",
+        "1 teaspoon salt",
+        "2 teaspoons pure vanilla extract",
+        "2 large eggs",
+        "2 cups semisweet and/or milk chocolate chips"
+    ],
+    "instructions": "1. Preheat your oven to 350°F (175°C). 2. In a mixing bowl, combine flour and baking soda. 3. In a separate bowl, cream together the butter, sugars, salt, and vanilla. 4. Beat in the eggs one at a time. 5. Gradually add the dry ingredients to the wet mixture. 6. Stir in the chocolate chips. 7. Drop rounded tablespoons of dough onto ungreased baking sheets. 8. Bake for 10-12 minutes until edges are golden. 9. Cool on baking sheets for a few minutes before transferring to wire racks to cool completely.",
+    "cookingtime": 30
+}
+###
+
+POST http://localhost:3000/api/recipes
+Content-Type: application/json
+
+{
+    "title": "Caprese Salad",
+    "ingredients": [
+        "4 ripe tomatoes",
+        "1 bunch fresh basil leaves",
+        "8 ounces fresh mozzarella cheese",
+        "2 tablespoons extra-virgin olive oil",
+        "2 tablespoons balsamic vinegar",
+        "Salt and pepper to taste"
+    ],
+    "instructions": "1. Slice the tomatoes and mozzarella cheese. 2. Arrange tomato, mozzarella, and basil on a serving platter. 3. Drizzle with olive oil and balsamic vinegar. 4. Season with salt and pepper. 5. Serve immediately.",
+    "cookingtime": 10
+}
+###
+
+POST http://localhost:3000/api/recipes
+Content-Type: application/json
+
+{
+    "title": "Chicken Alfredo Pasta",
+    "ingredients": [
+        "8 ounces fettuccine pasta",
+        "2 boneless, skinless chicken breasts",
+        "2 tablespoons olive oil",
+        "2 cloves garlic, minced",
+        "1 cup heavy cream",
+        "1/2 cup grated Parmesan cheese",
+        "Salt and pepper to taste",
+        "Chopped fresh parsley for garnish"
+    ],
+    "instructions": "1. Cook fettuccine pasta according to package instructions. 2. Season chicken breasts with salt and pepper. 3. Heat olive oil in a skillet over medium-high heat. 4. Add chicken and cook until no longer pink and juices run clear. 5. Remove chicken from skillet and slice into strips. 6. In the same skillet, add minced garlic and cook briefly. 7. Stir in heavy cream and Parmesan cheese. 8. Simmer until the sauce thickens. 9. Return chicken to the skillet and heat through. 10. Serve over cooked fettuccine pasta. 11. Garnish with chopped fresh parsley.",
+    "cookingtime": 30
+}
+
+###
+
+POST http://localhost:3000/api/recipes
+Content-Type: application/json
+
+{
+    "title": "Fish Toast",
+    "ingredients": [
+        "4 slices of white bread",
+        "200g white fish fillets (e.g., cod or haddock)",
+        "2 tablespoons olive oil",
+        "1/4 cup mayonnaise",
+        "1 tablespoon Dijon mustard",
+        "1 tablespoon lemon juice",
+        "1/4 teaspoon paprika",
+        "Salt and pepper to taste",
+        "Fresh parsley for garnish"
+    ],
+    "instructions": "1. Preheat your oven to 180°C (350°F). \n2. Place the white fish fillets on a baking sheet, drizzle with olive oil, and season with salt and pepper. Bake in the preheated oven for about 15-20 minutes or until the fish is cooked through and flakes easily with a fork. \n3. While the fish is baking, toast the slices of white bread until they are golden brown. \n4. In a small bowl, mix together the mayonnaise, Dijon mustard, lemon juice, and paprika to create a tangy sauce. \n5. Once the fish is done, remove it from the oven and flake it into small pieces with a fork. \n6. Spread a generous layer of the sauce onto each slice of toasted bread. \n7. Top the sauced bread with the flaked fish. \n8. Garnish with chopped fresh parsley. \n9. Serve your delicious fish toast immediately.",
+    "cookingtime": 30
+}
+
+###
+
+PUT http://localhost:3000/api/recipes/65099eedc7413861bdb4d7af
+Content-Type: application/json
+
+{
+    "title": "Pasta Carbonara",
+    "ingredients": [
+        "200g spaghetti",
+        "100g pancetta or guanciale",
+        "2 large eggs",
+        "50g Pecorino Romano cheese",
+        "50g Parmesan cheese",
+        "2 cloves garlic (optional)",
+        "Salt and black pepper to taste",
+        "Fresh parsley for garnish"
+    ],
+    "instructions": "1. Cook the spaghetti in a large pot of salted boiling water until al dente. \n2. While the pasta is cooking, heat a skillet over medium heat and add the pancetta or guanciale. Cook until crispy. \n3. In a bowl, whisk together the eggs, Pecorino Romano cheese, Parmesan cheese, and a pinch of black pepper. \n4. When the pasta is ready, reserve a cup of pasta water and then drain the pasta. \n5. Immediately add the hot, drained pasta to the skillet with the cooked pancetta. Toss to combine. \n6. Remove the skillet from heat and quickly pour the egg and cheese mixture over the pasta. Toss the pasta and sauce together, adding reserved pasta water as needed to create a creamy consistency. \n7. Season with salt and additional black pepper to taste. \n8. Garnish with chopped fresh parsley. \n9. Serve your delicious Pasta Carbonara immediately.",
+    "cookingtime": 20
+}
+
+###
+DELETE http://localhost:3000/api/recipes/65099eedc7413861bdb4d7af
+
+
+###
+GET http://localhost:3000/api/recipes
+
+###
+
+GET http://localhost:3000/api/recipes/Fish%20Toast
+
+

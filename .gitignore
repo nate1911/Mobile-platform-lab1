@@ -1,0 +1,11 @@
+# Ignore node_modules directory
+node_modules/
+
+# Ignore .env file (environment variables)
+.env
+
+# Ignore .vscode directory
+.vscode/
+
+# Ignore .git directory (already a Git repository)
+.git/
